@@ -7,8 +7,8 @@ import NavBar from './components/NavBar'
 class App extends Component{
   state={
     cords:{
-      longitude:28.7,
-      latitude:85.03
+      longitude:28,
+      latitude:83
     },
     data:{},
     inputLoc:''
@@ -30,7 +30,7 @@ class App extends Component{
     setTimeout(() => {
 
     Axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.cords.latitude}&lon=${this.state.cords.longitude}&appid=55a6b2683f3c85dcb1fe4e0d4039dc0a`).then(res=>{
-      console.log(res)
+      //console.log(res)
       let weatherData={
         location:res.data.name,
         temp:Number.parseFloat(res.data.main.temp-273).toFixed(2),
@@ -60,9 +60,9 @@ class App extends Component{
 
       //Api Call
       const url=`https://api.openweathermap.org/data/2.5/weather?q=${this.state.inputLoc}&appid=55a6b2683f3c85dcb1fe4e0d4039dc0a`
-        console.log(url);
+        //console.log(url);
       Axios.get(url).then(res=>{
-        console.log(res);
+        //console.log(res);
 
 
         let weatherData={
