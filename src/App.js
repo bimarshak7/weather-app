@@ -7,8 +7,8 @@ import NavBar from './components/NavBar'
 class App extends Component{
   state={
     cords:{
-      longitude:28,
-      latitude:83
+      longitude:2,
+      latitude:28
     },
     data:{},
     inputLoc:''
